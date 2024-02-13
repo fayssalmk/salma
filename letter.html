@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loading Page</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Lobster&display=swap');
+/* Loading Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loading .heart {
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+}
+
+/* Letter Container */
+
+
+body {
+  font-family: 'Homemade Apple';
+  font-size: 2rem;
+  background-color: rgb(255, 155, 208);
+}
+
+.container {
+  background: white;
+  width: 60ch;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5rem;
+  padding-top: 2rem;
+  box-shadow: 5px 5px 10px #aaa;
+}
+
+.line {
+  border-bottom: 1px solid #03a9f4;
+  height: 3rem;
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+.line span {
+  position: absolute;
+  bottom: -24px;
+  color: #5452ad;
+  opacity: 0.9;
+}
+
+.right span {
+  right: 0.5rem;
+}
+
+.indent span {
+  left: 15ch;
+}
+
+.double-indent span {
+  left: 25ch;
+}
+
+* {
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+}
+</style>
+</head>
+<body>
+<!-- Loading Page -->
+<div class="loading">
+  <div class="heart">&hearts;</div>
+</div>
+
+<!-- Content (Hidden Initially) -->
+<div class="container" style="opacity: 0; visibility: hidden;">
+
+        <div class="animation">
+            <div class="line"></div>
+            <div class="line right"><span>Wednesday 14<sup>th</sup> February</span></div>
+            <div class="line"> </div>
+            <div class="line"><span>Dear, Sliimaa,</span></div>
+            <div class="line indent"><span>Just a quick letter to thank you for</span></div>
+            <div class="line"><span>the beautiful time we spend together</span></div>
+            <div class="line"></div>
+            <div class="line"><span>I really enjoy talking to you</span></div>
+            <div class="line"><span>And I am very happy having someone sweet</span></div>
+            <div class="line"><span>like you in my life</span></div>
+            <div class="line"></div>
+            <div class="line"><span>I wish you a happy Valentine's Day</span></div>
+            <div class="line"><span>I'm sure there are plenty of people who love </span></div>
+            <div class="line"><span>the kind soul that you are</span></div>
+            <div class="line"></div>
+            <div class="line"><span>I'm glad to be one of them</span></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line double-indent"><span>Fayssal</span></div>
+            <div class="line"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Show content after 3 seconds
+setTimeout(function() {
+  document.querySelector('.loading').style.display = 'none';
+  var content = document.querySelector('.container');
+  content.style.opacity = 1;
+  content.style.visibility = 'visible';
+}, 3000);
+</script>
+
+</body>
+</html>
